@@ -13,21 +13,27 @@ public:
     string getNationalCode();
 protected:
     string nationalCode;
-    static int lengthOfNationalCode;
+    static const int lengthOfNationalCode;
 
     void checkIfValidNationalCode(const string &s);
     void checkIfNumeric(const string &s);
+    void checkLength(const string &s);
 };
 
 
 
-class InvalidNationalCodeError : public Exception {
+class InvalidNationalCode : public Exception {
     using Exception::Exception;
 };
 
-class NotNumericNationalCodeError : public InvalidNationalCodeError {
-    using InvalidNationalCodeError::InvalidNationalCodeError;
+class NotNumericNationalCode : public InvalidNationalCode {
+    using InvalidNationalCode::InvalidNationalCode;
 };
+
+class InvalidLenghtForNationalCode : public InvalidNationalCode {
+    using InvalidNationalCode::InvalidNationalCode;
+};
+
 
 
 
