@@ -6,6 +6,7 @@
 #include "NationalCode.h"
 #include "Age.h"
 #include "Username.h"
+#include "Password.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ protected:
     Age age;
     Gender gender;
     Username username;
+    Password parssword;
     
     //vector<Role> roles;
     //

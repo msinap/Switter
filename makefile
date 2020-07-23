@@ -20,6 +20,9 @@ NationalCode.o: source/Exception.h source/NationalCode.h source/NationalCode.cpp
 Age.o: source/Exception.h source/Age.h source/Age.cpp
 	$(CC) -c source/Age.cpp -o make/Age.o
 
+Password.o: source/Exception.h source/Password.h source/Password.cpp
+	$(CC) -c source/Password.cpp -o make/Password.o
+
 Username.o: source/Exception.h source/Username.h source/Username.cpp
 	$(CC) -c source/Username.cpp -o make/Username.o
 
