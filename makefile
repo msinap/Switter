@@ -2,8 +2,8 @@ CC := g++ -std=c++17
 
 all: a.out
 
-a.out: test.o Exception.o User.o NationalCode.o Age.o Username.o 
-	$(CC) make/test.o make/Exception.o make/User.o make/NationalCode.o make/Age.o make/Username.o
+a.out: test.o Exception.o User.o NationalCode.o Age.o Username.o Password.o
+	$(CC) make/test.o make/Exception.o make/User.o make/NationalCode.o make/Age.o make/Password.o make/Username.o 
 
 test.o: source/Exception.h source/NationalCode.h source/User.h source/Username.h source/Age.h source/test.cpp 
 	$(CC) -c source/test.cpp -o make/test.o
@@ -11,7 +11,7 @@ test.o: source/Exception.h source/NationalCode.h source/User.h source/Username.h
 Exception.o: source/Exception.h source/Exception.cpp
 	$(CC) -c source/Exception.cpp -o make/Exception.o
 
-User.o: source/Username.h source/Age.h source/User.h source/User.cpp
+User.o: source/Password.h source/Username.h source/Age.h source/NationalCode.h source/User.h source/User.cpp
 	$(CC) -c source/User.cpp -o make/User.o
 
 NationalCode.o: source/Exception.h source/NationalCode.h source/NationalCode.cpp
